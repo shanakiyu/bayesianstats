@@ -141,10 +141,10 @@ This project raises the question of whether UFO sightings reflect physical pheno
 <h2>Team</h2>
 
 <ul>
-  <li>Nina Vivier-Barte</li>
   <li>Emna Ben Ameur</li>
-  <li>Safia</li>
-  <li>Lelie</li>
+  <li>Safia Lamri</li>
+  <li>Lélie Chenouga</li>
+  <li>Nina Vivier-Barte</li>
 </ul>
 
 ---
@@ -166,23 +166,3 @@ Next steps:
 </ul>
 
 ---
-
-<h2>Tech Stack</h2>
-
-<ul>
-  <li>Python</li>
-  <li>Pandas</li>
-  <li>NumPy</li>
-  <li>Matplotlib</li>
-  <li>SciPy (optional)</li>
-  <li>PyMC (optional)</li>
-</ul>
-
----
-
-<h2>Timeline</h2>
-
-<ul>
-  <li>Submission deadline: May 28, 20:00</li>
-  <li>Presentations: June 2 and June 9</li>
-</ul>
