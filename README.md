@@ -1,45 +1,70 @@
-Bayesian Analysis of UFO Sightings and Hollywood Influence
-Project Overview
+<h1>Bayesian Analysis of UFO Sightings and Hollywood Influence</h1>
 
-This project investigates the following question:
+<h2>Project Overview</h2>
 
-Does the release of major science-fiction films influence the frequency of reported UFO sightings?
+<p>
+This project investigates whether the release of major science-fiction films influences the frequency of reported UFO sightings.
+</p>
 
-We approach this problem using Bayesian inference and a Poisson process, modeling UFO sightings as rare stochastic events whose rate may be affected by cultural phenomena such as cinema.
+<p>
+We model UFO sightings as rare stochastic events and use Bayesian inference to evaluate whether their rate increases following the release of selected films.
+</p>
 
-Conceptual Framework
+---
 
-UFO sightings are modeled as random events occurring over time. We assume a baseline rate of sightings and examine whether this rate changes after the release of selected science-fiction films.
+<h2>Conceptual Framework</h2>
 
-The analysis relies on:
+<ul>
+  <li>UFO sightings are modeled as random events over time.</li>
+  <li>A baseline rate is estimated using a Poisson distribution.</li>
+  <li>Bayesian inference updates this rate after new observations.</li>
+</ul>
 
-Poisson distribution for modeling rare events
+---
 
-Bayesian inference to update the rate parameter based on observed data
+<h2>Methodology</h2>
 
-Methodology
-Statistical Model
+<h3>Statistical Model</h3>
 
-We model the number of sightings with a Poisson process parameterized by λ (rate of occurrence). Bayesian inference is used to update λ after observing new data.
+<p>
+We model sightings using a Poisson process with parameter λ (rate of occurrence).
+Bayesian inference allows us to update λ given observed data:
+</p>
 
-P(λ | data) = P(data | λ) * P(λ) / P(data)
+<pre>
+P(λ | data) = P(data | λ) × P(λ) / P(data)
+</pre>
 
-Hypotheses
+<h3>Hypotheses</h3>
 
-H0 (null hypothesis): The rate of UFO sightings remains constant over time.
+<ul>
+  <li><strong>H0:</strong> The rate of UFO sightings remains constant.</li>
+  <li><strong>H1:</strong> The rate increases after the release of a science-fiction film.</li>
+</ul>
 
-H1 (alternative hypothesis): The rate of UFO sightings increases after the release of a science-fiction film.
+---
 
-Data Sources
+<h2>Data Sources</h2>
 
-UFO Sightings dataset
-Source: NUFORC (via Kaggle)
-Contains historical records of reported UFO sightings.
+<ul>
+  <li>
+    <strong>UFO Sightings Dataset</strong><br>
+    Source: NUFORC (via Kaggle)<br>
+    Historical records of UFO sightings.
+  </li>
+  <br>
+  <li>
+    <strong>Movie Release Dates</strong><br>
+    Selected science-fiction films (e.g. Independence Day, Arrival, Contact, Signs)<br>
+    Collected via TMDB.
+  </li>
+</ul>
 
-Movie release dates
-A selection of major science-fiction films (e.g. Independence Day, Arrival, Contact, Signs), collected via TMDB.
+---
 
-Project Structure
+<h2>Project Structure</h2>
+
+<pre>
 project/
 │
 ├── data/
@@ -54,62 +79,110 @@ project/
 │   └── tables/
 │
 └── README.md
-Workflow
+</pre>
 
-Data preprocessing
+---
 
-Convert date fields to datetime format
+<h2>Workflow</h2>
 
-Clean and filter relevant observations
+<ol>
+  <li>
+    <strong>Data preprocessing</strong>
+    <ul>
+      <li>Convert dates to datetime format</li>
+      <li>Clean and filter observations</li>
+    </ul>
+  </li>
 
-Time window construction
+  <li>
+    <strong>Time window construction</strong>
+    <ul>
+      <li>Define 3-month periods before and after each film release</li>
+    </ul>
+  </li>
 
-Define periods of 3 months before and after each film release
+  <li>
+    <strong>Statistical analysis</strong>
+    <ul>
+      <li>Estimate baseline λ</li>
+      <li>Apply Bayesian updating</li>
+    </ul>
+  </li>
 
-Statistical analysis
+  <li>
+    <strong>Visualization</strong>
+    <ul>
+      <li>Generate comparative plots</li>
+      <li>Produce summary tables</li>
+    </ul>
+  </li>
+</ol>
 
-Estimate the baseline rate λ
+---
 
-Apply Bayesian updating for each time window
+<h2>Expected Outputs</h2>
 
-Visualization
+<ul>
+  <li>Time series plots of UFO sightings</li>
+  <li>Comparison of rates before and after film releases</li>
+  <li>Posterior distribution summaries</li>
+</ul>
 
-Generate plots comparing pre- and post-release periods
+---
 
-Produce summary tables of results
+<h2>Epistemological Perspective</h2>
 
-Expected Outputs
+<p>
+This project raises the question of whether UFO sightings reflect physical phenomena or sociocultural dynamics influenced by media and collective perception.
+</p>
 
-Time series plots of UFO sightings
+---
 
-Comparison of estimated rates before and after film releases
+<h2>Team</h2>
 
-Tables summarizing posterior distributions
+<ul>
+  <li>Nina Vivier-Barte</li>
+  <li>Emna Ben Ameur</li>
+  <li>Safia</li>
+  <li>Lelie</li>
+</ul>
 
-Epistemological Perspective
+---
 
-This project also addresses a broader question: whether UFO sightings should be interpreted as observations of physical phenomena or as sociocultural constructs influenced by media and collective imagination.
+<h2>Current Status</h2>
 
-Team
+<p>
+The repository currently contains only the original datasets.
+</p>
 
-Nina Vivier-Barte
+<p>
+Next steps:
+</p>
 
-Emna Ben Ameur
+<ul>
+  <li>Data preprocessing</li>
+  <li>Implementation of the statistical model</li>
+  <li>Visualization and interpretation</li>
+</ul>
 
-Safia
+---
 
-Lelie
+<h2>Tech Stack</h2>
 
-Current Status
+<ul>
+  <li>Python</li>
+  <li>Pandas</li>
+  <li>NumPy</li>
+  <li>Matplotlib</li>
+  <li>SciPy (optional)</li>
+  <li>PyMC (optional)</li>
+</ul>
 
-The repository currently contains:
+---
 
-Raw datasets only
+<h2>Timeline</h2>
 
-Next steps include:
-
-Data preprocessing
-
-Implementation of the statistical model
-
-Generation of visualizations and interpretation of results
+<ul>
+  <li>Submission deadline: May 28, 20:00</li>
+  <li>Presentations: June 2 and June 9</li>
+</ul>
