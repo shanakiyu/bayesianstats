@@ -1,168 +1,37 @@
-<h1>Bayesian Analysis of UFO Sightings and Hollywood Influence</h1>
+# Bayesian Analysis: UFO Sightings and Hollywood Influence
 
-<h2>Project Overview</h2>
+## Project Overview
+This project investigates a sociological and cognitive phenomenon: Does the release of major Hollywood science-fiction blockbusters statistically increase the rate of reported UFO sightings in the United States? Rather than treating UFOs as physical anomalies, we approach them as measurable traces of human attention and media exposure. Using a Bayesian statistical framework, we analyzed decades of UFO reports alongside movie release data to test for a cultural "priming effect."
 
-<p>
-This project investigates whether the release of major science-fiction films influences the frequency of reported UFO sightings.
-</p>
+## Team
+* Emna Ben Ameur
+* Lélie Chenouga
+* Safia Lamri
+* Nina Vivier Barte
 
-<p>
-We model UFO sightings as rare stochastic events and use Bayesian inference to evaluate whether their rate increases following the release of selected films.
-</p>
+## Data Sources
+1. UFO Sightings: Sourced from the National UFO Reporting Center (NUFORC) via Kaggle. The dataset was rigorously cleaned, filtering for US-only sightings, realistic durations (1 sec to 24h), and dates post-1990 to align with the modern blockbuster era and internet reporting.
+2. Hollywood Sci-Fi Movies: Extracted using the TMDB API. We filtered the database to keep only major cultural events (movies with > 1,000 votes) to ensure the films studied had massive public visibility.
 
----
+## Methodology
+We modeled the daily UFO sighting counts as a rare stochastic event using a Poisson process. To test our hypothesis, we applied Bayesian Inference via the Gamma-Poisson conjugate model:
+* Prior: The baseline sighting rate in the 30 days before the movie release (modeled with a Gamma distribution).
+* Posterior: The updated rate in the 30 days after the movie release, updated analytically.
+* Evaluation: We used Monte Carlo simulations (100,000 draws) to calculate the probability of a rate increase.
 
-<h2>Conceptual Framework</h2>
+## Key Results
+* Global Impact: Across the 335 blockbusters analyzed, the pooled data shows a definitive rightward shift in the posterior distributions.
+* Conclusion: We reject the null hypothesis (H0). The data strongly supports our alternative hypothesis (H1): Hollywood sci-fi films act as a powerful cognitive prior. By saturating the media space, they temporarily configure public perception, making people more likely to interpret and report ambiguous aerial stimuli as UFOs.
 
-<ul>
-  <li>UFO sightings are modeled as random events over time.</li>
-  <li>A baseline rate is estimated using a Poisson distribution.</li>
-  <li>Bayesian inference updates this rate after new observations.</li>
-</ul>
+## Repository Structure
+* BayesianProject_UFO_SFMovies.ipynb: The main Jupyter Notebook containing the data pipeline, Bayesian modeling, and data visualization.
+* scrubbed.csv: The raw NUFORC UFO dataset.
+* hollywood_scifi_movies_INTEGRAL.csv: The TMDB movie dataset.
+* Bayesian_project.pdf: The detailed academic report explaining the historical context, methodology, and epistemological conclusions.
 
----
-
-<h2>Methodology</h2>
-
-<h3>Statistical Model</h3>
-
-<p>
-We model sightings using a Poisson process with parameter λ (rate of occurrence).
-Bayesian inference allows us to update λ given observed data:
-</p>
-
-<pre>
-P(λ | data) = P(data | λ) × P(λ) / P(data)
-</pre>
-
-<h3>Hypotheses</h3>
-
-<ul>
-  <li><strong>H0:</strong> The rate of UFO sightings remains constant.</li>
-  <li><strong>H1:</strong> The rate increases after the release of a science-fiction film.</li>
-</ul>
-
----
-
-<h2>Data Sources</h2>
-
-<ul>
-  <li>
-    <strong>UFO Sightings Dataset</strong><br>
-    Source: NUFORC (via Kaggle)<br>
-    Historical records of UFO sightings.
-  </li>
-  <br>
-  <li>
-    <strong>Movie Release Dates</strong><br>
-    Selected science-fiction films (e.g. Independence Day, Arrival, Contact, Signs)<br>
-    Collected via TMDB.
-  </li>
-</ul>
-
----
-
-<h2>Project Structure</h2>
-
-<pre>
-project/
-│
-├── data/
-│   ├── ufo_sightings.csv
-│   └── movies.csv
-│
-├── src/
-│   └── analysis.py
-│
-├── outputs/
-│   ├── plots/
-│   └── tables/
-│
-└── README.md
-</pre>
-
----
-
-<h2>Workflow</h2>
-
-<ol>
-  <li>
-    <strong>Data preprocessing</strong>
-    <ul>
-      <li>Convert dates to datetime format</li>
-      <li>Clean and filter observations</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Time window construction</strong>
-    <ul>
-      <li>Define 3-month periods before and after each film release</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Statistical analysis</strong>
-    <ul>
-      <li>Estimate baseline λ</li>
-      <li>Apply Bayesian updating</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Visualization</strong>
-    <ul>
-      <li>Generate comparative plots</li>
-      <li>Produce summary tables</li>
-    </ul>
-  </li>
-</ol>
-
----
-
-<h2>Expected Outputs</h2>
-
-<ul>
-  <li>Time series plots of UFO sightings</li>
-  <li>Comparison of rates before and after film releases</li>
-  <li>Posterior distribution summaries</li>
-</ul>
-
----
-
-<h2>Epistemological Perspective</h2>
-
-<p>
-This project raises the question of whether UFO sightings reflect physical phenomena or sociocultural dynamics influenced by media and collective perception.
-</p>
-
----
-
-<h2>Team</h2>
-
-<ul>
-  <li>Emna Ben Ameur</li>
-  <li>Safia Lamri</li>
-  <li>Lélie Chenouga</li>
-  <li>Nina Vivier-Barte</li>
-</ul>
-
----
-
-<h2>Current Status</h2>
-
-<p>
-The repository currently contains only the original datasets.
-</p>
-
-<p>
-Next steps:
-</p>
-
-<ul>
-  <li>Data preprocessing</li>
-  <li>Implementation of the statistical model</li>
-  <li>Visualization and interpretation</li>
-</ul>
-
----
+## How to Run the Code
+This project is optimized for Google Colab.
+1. Open BayesianProject_UFO_SFMovies.ipynb in Google Colab or your local Jupyter environment.
+2. Run the Data Import cell.
+3. When prompted, upload the two CSV datasets (scrubbed.csv and hollywood_scifi_movies_INTEGRAL.csv).
+4. Execute the rest of the notebook sequentially to reproduce the data cleaning, time-window generation, Bayesian inference, and global posterior plots.
