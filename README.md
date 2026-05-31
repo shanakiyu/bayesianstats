@@ -29,7 +29,7 @@ We modeled the daily UFO sighting counts as a rare stochastic event using a Pois
 * Conclusion: We reject the null hypothesis (H0). The data strongly supports our alternative hypothesis (H1): Hollywood sci-fi films act as a powerful cognitive prior. By saturating the media space, they temporarily configure public perception, making people more likely to interpret and report ambiguous aerial stimuli as UFOs.
 
 ## Repository Structure
-* BayesianProject_UFO_SFMovies.ipynb: The main Jupyter Notebook containing the data pipeline, Bayesian modeling, and data visualization.
+* Project_Bayesian_Statistics_Emna-BenAmeur_Lélie-Chenouga_Safia-Lamri_Nina-VivierBarte.ipynb: The main Jupyter Notebook containing the data pipeline, Bayesian modeling, and data visualization.
 * scrubbed.csv: The raw NUFORC UFO dataset.
 * hollywood_scifi_movies_INTEGRAL.csv: The TMDB movie dataset.
 * Bayesian_project.pdf: The detailed academic report explaining the historical context, methodology, and epistemological conclusions.
