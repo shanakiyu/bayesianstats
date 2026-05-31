@@ -41,3 +41,6 @@ This project is optimized for Google Colab.
 2. Run the Data Import cell.
 3. When prompted, upload the two CSV datasets (scrubbed.csv and hollywood_scifi_movies_INTEGRAL.csv).
 4. Execute the rest of the notebook sequentially to reproduce the data cleaning, time-window generation, Bayesian inference, and global posterior plots.
+
+## Acknowledgments & Tools
+* **AI Assistance:** Large Language Models (LLMs) were used strictly as coding assistants (for code formatting, minor debugging, and translating text to English). The conceptual framework, dataset selection, Bayesian modeling, and epistemological conclusions are entirely the original work of the authors.
