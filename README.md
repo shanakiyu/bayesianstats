@@ -10,9 +10,9 @@ This project investigates a sociological and cognitive phenomenon: Does the rele
 * Nina Vivier Barte
 
 ## Team Contributions & Workflow
-* Emna Ben Ameur and Nina Vivier Barte: Led the technical and data engineering efforts. This included API data extraction, dataset cleaning, and coding the Bayesian Gamma-Poisson model in Python.
-* Lélie Chenouga and Safia Lamri: Led the analytical and academic efforts. This included analyzing the statistical outputs, conducting historical and bibliographic research, and authoring the final academic report.
-* Note on Git History: The coding and data exploration were conducted collaboratively using Google Colab. Consequently, the commit history on this repository does not fully reflect individual contributions, as the final notebooks were pushed to GitHub by a single account after the collaborative work was completed.
+* **Emna Ben Ameur and Nina Vivier Barte:** Led the technical and data engineering efforts. This included API data extraction, dataset cleaning, and coding the Bayesian Gamma-Poisson model in Python.
+* **Lélie Chenouga and Safia Lamri:** Led the analytical and academic efforts. This included analyzing the statistical outputs, conducting historical and bibliographic research, and authoring the final academic report.
+* **Note on Git History:** The coding and data exploration were conducted collaboratively using **Google Colab** and the report was written on **Google Docs**. Consequently, the commit history on this repository does not fully reflect individual contributions, as the final notebooks/PDF were pushed to GitHub by a single account after the collaborative work was completed.
 
 ## Data Sources
 1. UFO Sightings: Sourced from the National UFO Reporting Center (NUFORC) via Kaggle. The dataset was rigorously cleaned, filtering for US-only sightings, realistic durations (1 sec to 24h), and dates post-1990 to align with the modern blockbuster era and internet reporting.
