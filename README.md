@@ -28,6 +28,7 @@ We modeled the daily UFO sighting counts as a rare stochastic event using a Pois
 * scrubbed.csv: The raw NUFORC UFO dataset.
 * hollywood_scifi_movies_INTEGRAL.csv: The TMDB movie dataset.
 * Bayesian_project.pdf: The detailed academic report explaining the historical context, methodology, and epistemological conclusions.
+* PROJECT.ipynb: The notebook used to scrap the TMDB movie dataset with the TMDB API.
 
 ## How to Run the Code
 This project is optimized for Google Colab.
